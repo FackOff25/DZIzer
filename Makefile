@@ -1,4 +1,4 @@
-all: tiler.o
+all: dzizer.o
 
-tiler.o: tiler.cpp
-	g++ -std=c++17 -Wall -o tiler.o -g tiler.cpp `pkg-config vips-cpp --cflags --libs`
+dzizer.o: dzizer.cpp
+	g++ -std=c++17 -Wall -o dzizer.o -g dzizer.cpp `pkg-config vips-cpp --cflags --libs`
