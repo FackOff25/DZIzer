@@ -18,15 +18,15 @@ bool build(std::string input, std::string output, std::string saveDir, std::stri
     std::string dzFile = savePath + output;
     //Cleaning <output>_files folder because it must contain only tiles
     fs::remove_all(dzFile + "_files");
-    std::string thumbnail = savePath + output + ".jpg";
+    //std::string thumbnail = savePath + output + ".jpg";
 
     try{
         vips::VImage image = vips::VImage::new_from_file(input.c_str());
         //Possible definitions for "depth" option: https://www.libvips.org/API/8.6/VipsForeignSave.html#VipsForeignDzDepth
         image.dzsave(dzFile.c_str(), vips::VImage::option()->set("depth", VIPS_FOREIGN_DZ_DEPTH_ONEPIXEL));
-        /*Thumbnail if needed*/
+        /*Thumbnail if needed
         int maxLength = std::max(image.width(), image.height());
-        image.resize(180.0/maxLength).jpegsave(thumbnail.c_str());
+        image.resize(180.0/maxLength).jpegsave(thumbnail.c_str());*/
         return true;
     }catch(const vips::VError& e){
         std::cerr << e.what();
