@@ -5,7 +5,7 @@
 namespace fs = std::filesystem;
 //input — image to convert to dzi
 //output — name(without path) of output file. DZI extension is xml dzi file and folder with tiles,
-//the will have this name
+//the files will have this name
 //saveDir — directory to save the dzi to. not necessary to exist
 //containerDir — directory with all files. If "" files will be saved in saveDir
 bool build(std::string input, std::string output, std::string saveDir, std::string containerDir){
