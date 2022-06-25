@@ -21,5 +21,5 @@ output — name(without path) of output file. DZI extension is xml dzi file and 
 
 saveDirectory — directory to save the dzi to. not necessary to exist
 
-containerDir — directory with all files, therefore the dzi files will be saved in "saveDirectory/containerDir/". Isn't necessary, 
+container — directory with all files, therefore the dzi files will be saved in "saveDirectory/container/". Isn't necessary, 
 without it the dzi files will be saved in just "saveDirectory/"
